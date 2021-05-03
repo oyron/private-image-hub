@@ -1,6 +1,6 @@
 FROM node:15-alpine as base
 WORKDIR /usr/src/app
-COPY package*.json .
+COPY package.json .
 
 FROM base
 RUN npm install
