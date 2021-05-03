@@ -14,4 +14,6 @@ COPY src src
 ARG portNumber=8080
 ENV PORT=$portNumber
 EXPOSE $portNumber
+USER "node"
 CMD ["node", "src/server.js"]
+
