@@ -1,16 +1,21 @@
-FROM node:15-alpine as base
+FROM node:15-alpine
+
+#Build server
 WORKDIR /usr/src/app
 COPY package.json .
-
-FROM base
-RUN npm install
-COPY src src
-RUN npm test
-
-FROM base
 RUN npm install --production
-COPY src src
+WORKDIR /usr/src/app/src
+COPY src/*.js .
 
+#Build client
+WORKDIR /usr/src/app/src/client
+COPY src/client/package.json .
+RUN npm install --production
+COPY src/client/src src
+COPY src/client/public public
+RUN yarn build
+
+WORKDIR /usr/src/app
 ARG portNumber=8080
 ENV PORT=$portNumber
 EXPOSE $portNumber

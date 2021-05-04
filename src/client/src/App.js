@@ -1,5 +1,5 @@
 import './App.css';
-import { Button, Typography } from '@equinor/eds-core-react'
+import { Typography } from '@equinor/eds-core-react'
 
 const App = () => (
   <>
