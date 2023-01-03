@@ -1,4 +1,4 @@
-FROM node:15-alpine
+FROM node:lts-alpine
 
 #Build server
 WORKDIR /usr/src/app
@@ -18,6 +18,9 @@ WORKDIR /usr/src/app
 ARG portNumber=8080
 ENV PORT=$portNumber
 EXPOSE $portNumber
-USER "node"
+
+RUN addgroup -S -g 1001 radix-non-root-group
+RUN adduser -S -u 1001 -G radix-non-root-group radix-non-root-user
+USER 1001
 CMD ["node", "src/server.js"]
 
