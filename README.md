@@ -1,3 +1,3 @@
 # Radix Test Application
 
-Test application for Omnia Radix
+Test application for Omnia Radix platform
