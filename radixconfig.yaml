@@ -9,6 +9,9 @@ spec:
         from: main
       egress:
         allowRadix: false
+  dnsAppAlias:
+    environment: single
+    component: web
   components:
     - name: web
       src: "."
