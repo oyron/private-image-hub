@@ -14,7 +14,7 @@ spec:
     component: web
   components:
     - name: web
-      image: ghcr.io/oyron/radix-test:v2
+      image: ghcr.io/oyron/radix-test:v3
       ports:
         - name: http
           port: 8080
