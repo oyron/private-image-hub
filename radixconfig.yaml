@@ -28,7 +28,7 @@ spec:
         - environment: qa
           imageTagName: v5
         - environment: prod
-          imageTagName: v3
+          imageTagName: v4
       authentication:
         oauth2:
           clientId: ca01531a-2065-448b-8a0f-a667fbbcd1d1
