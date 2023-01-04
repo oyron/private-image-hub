@@ -4,7 +4,12 @@ metadata:
   name: radix-test
 spec:
   environments:
-    - name: single
+    - name: qa
+      build:
+        from: main
+      egress:
+        allowRadix: false
+    - name: prod
       build:
         from: main
       egress:
@@ -19,6 +24,11 @@ spec:
         - name: http
           port: 8080
       publicPort: http
+      environmentConfig:
+        - environment: qa
+          imageTagName: v4
+        - environment: prod
+          imageTagName: v3
       authentication:
         oauth2:
           clientId: ca01531a-2065-448b-8a0f-a667fbbcd1d1
