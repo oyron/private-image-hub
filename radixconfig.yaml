@@ -15,11 +15,11 @@ spec:
       egress:
         allowRadix: false
   dnsAppAlias:
-    environment: single
+    environment: prod
     component: web
   components:
     - name: web
-      image: ghcr.io/oyron/radix-test:v3
+      image: ghcr.io/oyron/radix-test:{imageTagName}
       ports:
         - name: http
           port: 8080
