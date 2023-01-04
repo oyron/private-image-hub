@@ -4,7 +4,7 @@ FROM node:lts-alpine
 WORKDIR /usr/src/app
 COPY package.json .
 RUN npm install --production
-COPY src/*.js src/
+COPY src/ src/
 
 WORKDIR /usr/src/app
 ARG portNumber=8080
