@@ -24,7 +24,7 @@ spec:
       publicPort: http
       environmentConfig:
         - environment: qa
-          imageTagName: v6
+          imageTagName: v7
       authentication:
         oauth2:
           clientId: ca01531a-2065-448b-8a0f-a667fbbcd1d1
