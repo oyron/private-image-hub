@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    
     <title>Radix Test App</title>
-  </head>
+</head>
 
-  <body>
-    <h1>Radix Test App v7</h1>
-  </body>
+<body>
+    <h1 id="h1">Radix Test App</h1>
+</body>
 </html>
+
+<script>
+    async function loadVersion() {
+        const response = await fetch('/api/version');
+        const versionInfo = await response.json();
+        const h1 = document.getElementById('h1');
+        h1.innerText = `Radix Test App ${versionInfo.version}`;
+    }
+    loadVersion()
+</script>
