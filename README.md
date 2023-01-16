@@ -1,3 +1,2 @@
-# Radix Test Application
+# Radix Test: external repo, tags and promotion
 
-Test application for Omnia Radix platform
