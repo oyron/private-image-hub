@@ -29,16 +29,6 @@ spec:
         oauth2:
           clientId: ca01531a-2065-448b-8a0f-a667fbbcd1d1
           scope: openid profile email offline_access
-          sessionStoreType: redis
-          redisStore:
-            connectionUrl: redis://redis:6379
-    - name: redis
-      image: bitnami/redis:latest
-      secrets:
-        - REDIS_PASSWORD
-      ports:
-        - name: redis
-          port: 6379
   privateImageHubs:
     ghcr.io:
       username: oyron
